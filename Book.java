@@ -10,13 +10,13 @@ public class Book {
         this.author = author;
         this.page = page;
     }
-    public String isBig(int page){
-        return page >= 500 ? "Да":"Нет";
+    public boolean isBig(int page){
+        return page >= 500 ? true:false;
      }
-     public String matches(String word){
+     public boolean matches(String word){
          return word != null && this.title.toLowerCase().contains(word.toLowerCase()) ||
                  this.author.name.toLowerCase().contains(word.toLowerCase())
-                 || this.author.surname.toLowerCase().contains(word.toLowerCase()) ? "Да":"Нет";
+                 || this.author.surname.toLowerCase().contains(word.toLowerCase()) ? true:false;
      }
 
      public int estimatePrice(int page){
